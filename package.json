@@ -9,6 +9,7 @@
   "author": "Pat Legault",
   "license": "ISC",
   "dependencies": {
+    "https-proxy-agent": "^7.0.6",
     "i": "^0.3.7",
     "needle": "^1.0.0",
     "npm": "^11.6.0"

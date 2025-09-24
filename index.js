@@ -1,6 +1,8 @@
 const needle = require('needle');
+const { HttpsProxyAgent } = require('https-proxy-agent')
 
 const PROXY_URL = 'http://localhost:8080'
+const agent = new HttpsProxyAgent(PROXY_URL)
 
 needle.get('https://deploy-service.app-builder.adp.adobe.io/runtime/api/v1/namespaces/16225-665azurecat-stage/packages?', {
     accept: 'application/json',
@@ -9,7 +11,7 @@ needle.get('https://deploy-service.app-builder.adp.adobe.io/runtime/api/v1/names
         'authorization': 'Bearer ',
         'x-namespace-id': '16225-665azurecat-stage'
     },
-    proxy: PROXY_URL,
+    agent: agent,
     connection: 'keep-alive'
 }, function (err, resp) {
     if (err) {

@@ -1,0 +1,16 @@
+{
+  "name": "com.adobe.aio.needle",
+  "version": "1.0.0",
+  "description": "AIO Cli Deploy Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pat Legault",
+  "license": "ISC",
+  "dependencies": {
+    "i": "^0.3.7",
+    "needle": "^1.0.0",
+    "npm": "^11.6.0"
+  }
+}
